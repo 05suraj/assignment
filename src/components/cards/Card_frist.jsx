@@ -16,8 +16,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
-import CardChild1 from './CardChild1';
-import CardChild2 from './CardChild2';
+import CardChild1 from '../inner-card/CardChild1';
+import CardChild2 from '../inner-card/CardChild2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%', 
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
- const ClientCard =()=> {
+const Card_frist = () => {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -82,11 +82,7 @@ const useStyles = makeStyles((theme) => ({
     return (
 
         <Card className={classes.root}>
-
-
-
             <CardActions disableSpacing>
-
                 <Typography gutterBottom variant="subtitle1" className={classes.card_heading}>
                     Accounting
                 </Typography>
@@ -100,14 +96,9 @@ const useStyles = makeStyles((theme) => ({
                 >
                     <ExpandMoreIcon />
                 </IconButton>
-
             </CardActions>
-
             <Typography paragraph>
                 <Grid container spacing={3}>
-
-
-
                     <Grid item xs={12} sm={4}>
                         <label className={classes.label_text}>not started</label>
                         <ButtonGroup disableElevation variant="contained" color="primary">
@@ -127,13 +118,9 @@ const useStyles = makeStyles((theme) => ({
                     <Grid item xs={12} sm={4}>
                         <label className={classes.label_text}>completed</label>
                         <ButtonGroup disableElevation variant="contained" color="primary">
-
                             <Button className={classes.btnbaground}>2</Button>
                             <Button className={classes.btnbaground2}>25</Button>
                         </ButtonGroup>
-
-
-
                     </Grid>
                 </Grid>
             </Typography>
@@ -141,16 +128,12 @@ const useStyles = makeStyles((theme) => ({
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <Divider />
                 <CardContent>
-
-
-
                     <CardChild1 />
                     <CardChild2 />
                     <CardChild1 />
-
                 </CardContent>
             </Collapse>
         </Card>
     );
 }
-export default ClientCard;
+export default Card_frist;

@@ -1,12 +1,9 @@
 import React from 'react'
 import { makeStyles, Button, Grid, IconButton } from '@material-ui/core';
-
-
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Popover from '@material-ui/core/Popover';
-
 import Typography from '@material-ui/core/Typography';
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import pushicon from '../image/pushpin.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,12 +16,12 @@ const useStyles = makeStyles((theme) => ({
     indigo: {
         fontSize: '26px',
         fontWeight: '600',
-        color: "black"
+        color: "black",
 
     }
 
 }));
-const ClientHeading1 = () => {
+const ClientHeading3 = () => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -44,7 +41,7 @@ const ClientHeading1 = () => {
                 direction="row"
                 justify="space-between"
                 alignItems="center">
-                <h1 className={classes.indigo}>Rambow</h1>
+                <h1 className={classes.indigo}>indigo</h1>
                 <Typography
                     aria-owns={open ? 'mouse-over-popover' : undefined}
                     aria-haspopup="true"
@@ -52,7 +49,7 @@ const ClientHeading1 = () => {
                     onMouseLeave={handlePopoverClose}
                 >
                     <IconButton color="primary">
-                        <HighlightOffIcon />
+                        <img src={pushicon} alt="pushicon" />
                     </IconButton>
 
                 </Typography>
@@ -79,5 +76,6 @@ const ClientHeading1 = () => {
         </>
     )
 }
+export default ClientHeading3;
 
-export default ClientHeading1;
+

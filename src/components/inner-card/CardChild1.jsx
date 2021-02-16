@@ -2,32 +2,31 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-
 import CardActions from '@material-ui/core/CardActions';
-
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
 
     cardBorder: {
-        borderLeft: '3px solid #e7f03a'
+        marginBottom: "15px",
+        marginTop: '15px',
+        borderLeft: '3px solid #df88f2',
+
     },
     subtitle: {
-        fontSize: "13px",
+        fontSize: "13px",  
 
         color: "#9c9a9a",
     }
 }));
-export default function CardChild2() {
+const CardChild1 = () => {
     const classes = useStyles();
     return (
         <>
-            <Card className={classes.cardBorder} >
+            <Card className={classes.cardBorder}  >
                 <CardHeader
 
                     action={
@@ -37,7 +36,7 @@ export default function CardChild2() {
                     }
 
                     subheader={
-                        <Typography gutterBottom variant="subtitle1">
+                        <Typography gutterBottom variant="subtitle1" >
                             Cash Recon with CP-Cash
                 </Typography>
                     }
@@ -57,3 +56,4 @@ export default function CardChild2() {
         </>
     )
 }
+export default CardChild1;

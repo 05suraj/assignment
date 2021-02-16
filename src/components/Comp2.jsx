@@ -1,16 +1,14 @@
 import React from 'react';
-import { makeStyles, Button, Paper, Grid, IconButton } from '@material-ui/core';
-
+import { makeStyles, Button, Paper, Grid, } from '@material-ui/core';
 import Radio from '@material-ui/core/Radio';
-
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import ClientCard from './ClientCard';
-import ClientCard1 from './ClientCard1';
+import ClientCard from './cards/Card_frist';
+import ClientCard1 from './cards/Card_second';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
-import ClientHeading from './ClientHeading';
-import ClientHeading1 from './ClientsHeading1';
-import ClientHeading2 from './ClientHeading2';
+import ClientHeading from './card_heading/ClientHeading3';
+import ClientHeading1 from './card_heading/ClientHeading1';
+import ClientHeading2 from './card_heading/ClientHeading2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -60,16 +58,13 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "12px"
     }
 
+
+
+
 }));
 
 export default function Comp2() {
     const classes = useStyles();
-
-
-
-
-
-
 
 
     return (
@@ -109,15 +104,14 @@ export default function Comp2() {
                             <ClientCard1 />
                         </Paper>
                     </Grid>
+
                     <Grid itemxs={12} sm={4}>
                         <Paper className={clsx(classes.paper, classes.gridbaground1)} elevation={3}>
+
                             <ClientHeading1 />
                             <ClientCard className={classes.cardMargin} />
                             <ClientCard className={classes.cardMargin} />
                             <ClientCard className={classes.cardMargin} />
-
-
-
                         </Paper>
                     </Grid>
                     <Grid item xs={12} sm={4}>

@@ -16,8 +16,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
-import CardChild1 from './CardChild1';
-import CardChild2 from './CardChild2';
+import CardChild1 from '../inner-card/CardChild1';
+import CardChild2 from '../inner-card/CardChild2';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
- const ClientCard1=()=> {
+ const Card_second =()=> {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(true);
 
@@ -81,6 +81,9 @@ const useStyles = makeStyles((theme) => ({
 
     return (
 
+
+
+      
         <Card className={classes.root}>
 
 
@@ -104,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
             </CardActions>
 
             <Typography paragraph>
-                <Grid container spacing={3}>
+                <Grid container spacing={2} xs={12}>
 
 
 
@@ -154,4 +157,4 @@ const useStyles = makeStyles((theme) => ({
     );
 }
 
-export default ClientCard1;
+export default Card_second;

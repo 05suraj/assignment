@@ -32,10 +32,18 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Textfield() {
     const classes = useStyles();
-    const [age, setAge] = React.useState('');
+    const [client, setClient] = React.useState('');
+    const [service, setService] = React.useState('');
+    const [task, setTask] = React.useState('');
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
+    const handleChange1 = (event) => {
+        setClient(event.target.value);
+    };
+    const handleChange2 = (event) => {
+        setService(event.target.value);
+    };
+    const handleChange3 = (event) => {
+        setTask(event.target.value);
     };
     return (
         <div className={classes.root}>
@@ -49,8 +57,8 @@ export default function Textfield() {
                         <Select
                             labelId="demo-simple-select-outlined-label"
                             id="demo-simple-select-outlined"
-                            value={age}
-                            onChange={handleChange}
+                            value={client}
+                            onChange={handleChange1}
                             label="Age"
                         >
                             <MenuItem value="">
@@ -71,8 +79,8 @@ export default function Textfield() {
                         <Select
                             labelId="demo-simple-select-outlined-label1"
                             id="demo-simple-select-outlined"
-                            value={age}
-                            onChange={handleChange}
+                            value={service}
+                            onChange={handleChange2}
                             label="Age"
                         >
                             <MenuItem value="">
@@ -90,8 +98,8 @@ export default function Textfield() {
                         <Select
                             labelId="demo-simple-select-outlined-label2"
                             id="demo-simple-select-outlined"
-                            value={age}
-                            onChange={handleChange}
+                            value={task}
+                            onChange={handleChange3}
                             label="Age"
                         >
                             <MenuItem value="">

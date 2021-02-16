@@ -79,8 +79,8 @@ export default function Comp1() {
     const classes = useStyles();
     const [state, setState] = React.useState({
         gilad: true,
-        jason: false,
-        antoine: false,
+        jason: true,
+        antoine: true,
     });
 
     const handleChange = (event) => {
